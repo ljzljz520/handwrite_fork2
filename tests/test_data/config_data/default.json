@@ -1,5 +1,10 @@
 {
   "threshold_value": 200,
+  "contextual_variants": {
+    "enabled": true,
+    "max_variants": 4,
+    "sources": {}
+  },
   "props": {
     "ascent": 800,
     "descent": 200,

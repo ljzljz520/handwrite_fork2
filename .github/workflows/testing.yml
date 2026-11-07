@@ -40,11 +40,12 @@ jobs:
       - name: Install E2E dependencies (Linux)
         run: |
           sudo apt-get update
-          sudo apt-get install --yes fontforge potrace
+          sudo apt-get install --yes fontforge potrace harfbuzz
       - name: Verify E2E dependencies (Linux)
         run: |
           fontforge -lang=py -c 'import fontforge; print(fontforge.version())'
           potrace --version
+          hb-shape --version
       - name: Install Handwrite
         run: uv sync --frozen --no-dev
       - name: Test
